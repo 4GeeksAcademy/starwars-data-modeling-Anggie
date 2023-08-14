@@ -21,13 +21,22 @@ class User(Base):
 class Planet(Base):
     __tablename__ = 'planet'
     id = Column(Integer, primary_key=True)
-    diameter = Column(Integer(), nullable=False) # tengo que agregar mas campos
-    
+    name = Column(String(250), nullable=False)
+    diameter = Column(Integer(), nullable=False) 
+    climate = Column(String(250), nullable=False)
+    terrain = Column(String(250), nullable=False)
+    population = Column(Integer(), nullable=False) 
 
 class Character(Base):
     __tablename__ = 'character'
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
+    height = Column(Integer(), nullable=False)
+    hair_color = Column(String(250), nullable=False)
+    eye_color = Column(String(250), nullable=False)
+    skin_color = Column(String(250), nullable=False)
+    gender = Column(String(250), nullable=False)
+
 
 class Favorite(Base):
     __tablename__ = 'favorite'
